@@ -1,0 +1,42 @@
+
+<script>
+  function voltar() {
+    history.back();
+  }
+</script>
+
+<div class="row">
+  <div class="col-lg-6 text-center">
+    <button class="btn btn-large btn-info" onclick="() => voltar()">
+      Voltar
+    </button>
+  </div>
+  <div class="col-lg-6 text-center">
+    <h1><%= films[id].title%></h1>
+  </div>
+</div>
+
+
+<div class="artplayer-app"></div>
+
+<script src="/js/artplayer.js"></script>
+
+<script>
+  var art = new Artplayer({
+    container: '.artplayer-app',
+    url: '/tv?id=<%= id%>&type=film',
+    theme: '#23ade5',
+    volume: 0.7,
+    fullscreen: true,
+    fullscreenWeb: true,
+    autoSize: true,
+    autoMini: true,
+    screenshot: true,
+    setting: true,
+    loop: true,
+    flip: true,
+  });
+</script>
+
+<% include ../partials/footer %>
+

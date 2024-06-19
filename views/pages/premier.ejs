@@ -1,0 +1,22 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+
+<main>
+    <div class="jumbotron">
+				<div class="text-center">
+						<h1>SPORTV</h1>
+							<div class="row">
+								<div class="col-sm-12">
+   							<% tvs.forEach(function(tv) { %>
+									<% if (true) { %>
+										<a class="btn btn-primary prepend-top" href="/tv?id=<%=tv.id%>" ><%= tv.properties.title %></a>
+									<% } %>
+    						<% }); %>
+</div>
+						</div>
+				</div>
+    </div>
+</main>
+
+<% include ../partials/footer %>
+
