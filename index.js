@@ -67,17 +67,6 @@ app.get('/video', function (req, res) {
   res.render('pages/tv', {films: getFilms(), id: id});
 })
 
-app.get('/sportv', function (req, res) {
-  var result = url.parse(req.url, true);
-  var id = result.query['id'];
-  res.render('pages/sportv', {tvs: tvs, id: id});
-});
-
-app.get('/premier', function (req, res) {
-  var result = url.parse(req.url, true);
-  var id = result.query['id'];
-  res.render('pages/premier', {tvs: tvs, id: id});
-});
 
 app.listen(3000, function () {
   console.log('Rodando o servidor na porta 3000 ...');
